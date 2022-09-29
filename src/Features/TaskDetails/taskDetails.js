@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { useState } from "react";
 import {  useParams } from "react-router-dom";
 
@@ -7,7 +8,7 @@ function TaskDetails(){
   const [description, setDescription] = useState("")
   const [hours, setHours] = useState("")
 
-  const [list , setList] = useState(() => {
+  const [list] = useState(() => {
     const savedList = localStorage.getItem("list")
     if (savedList)
      {return JSON.parse(savedList)
